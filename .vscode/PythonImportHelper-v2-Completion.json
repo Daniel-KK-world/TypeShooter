@@ -1,0 +1,181 @@
+[
+    {
+        "label": "pygame",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pygame",
+        "description": "pygame",
+        "detail": "pygame",
+        "documentation": {}
+    },
+    {
+        "label": "gfxdraw",
+        "importPath": "pygame",
+        "description": "pygame",
+        "isExtraImport": true,
+        "detail": "pygame",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "Target",
+        "kind": 6,
+        "importPath": "shoot",
+        "description": "shoot",
+        "peekOfCode": "class Target:\n    def __init__(self, word):\n        self.word = word\n        self.radius = TARGET_RADIUS\n        self.x = random.randint(self.radius, WIDTH - self.radius)\n        self.y = random.randint(self.radius, HEIGHT // 2)\n        self.speed_x = random.choice([-TARGET_SPEED, TARGET_SPEED])\n        self.speed_y = 0\n        self.typed_so_far = \"\"\n        self.is_alive = True",
+        "detail": "shoot",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "shoot",
+        "description": "shoot",
+        "peekOfCode": "def main():\n    screen = pygame.display.set_mode((WIDTH, HEIGHT))\n    pygame.display.set_caption(\"Target Shooting Typing Game\")\n    word_list = [\"pygame\", \"target\", \"shoot\", \"code\", \"type\", \"hit\", \"key\", \"fun\"]\n    active_targets = []\n    current_input = \"\"\n    score = 0\n    timer = INITIAL_TIME * 60  # Convert to frames\n    clock = pygame.time.Clock()\n    spawn_timer = 0",
+        "detail": "shoot",
+        "documentation": {}
+    },
+    {
+        "label": "TARGET_RADIUS",
+        "kind": 5,
+        "importPath": "shoot",
+        "description": "shoot",
+        "peekOfCode": "TARGET_RADIUS = 40\nTARGET_SPEED = 1.2  # Slower than before\nSPAWN_RATE = 60  # More forgiving spawn rate\nINITIAL_TIME = 30  # Starting time (seconds)\nTIME_PER_HIT = 2  # Seconds added per hit\nTIME_PENALTY = 1  # Seconds lost per missed target\nBG_COLOR = (10, 10, 30)\n# Colors\nWHITE = (255, 255, 255)\nGREEN = (50, 255, 50)",
+        "detail": "shoot",
+        "documentation": {}
+    },
+    {
+        "label": "TARGET_SPEED",
+        "kind": 5,
+        "importPath": "shoot",
+        "description": "shoot",
+        "peekOfCode": "TARGET_SPEED = 1.2  # Slower than before\nSPAWN_RATE = 60  # More forgiving spawn rate\nINITIAL_TIME = 30  # Starting time (seconds)\nTIME_PER_HIT = 2  # Seconds added per hit\nTIME_PENALTY = 1  # Seconds lost per missed target\nBG_COLOR = (10, 10, 30)\n# Colors\nWHITE = (255, 255, 255)\nGREEN = (50, 255, 50)\nRED = (255, 50, 50)",
+        "detail": "shoot",
+        "documentation": {}
+    },
+    {
+        "label": "SPAWN_RATE",
+        "kind": 5,
+        "importPath": "shoot",
+        "description": "shoot",
+        "peekOfCode": "SPAWN_RATE = 60  # More forgiving spawn rate\nINITIAL_TIME = 30  # Starting time (seconds)\nTIME_PER_HIT = 2  # Seconds added per hit\nTIME_PENALTY = 1  # Seconds lost per missed target\nBG_COLOR = (10, 10, 30)\n# Colors\nWHITE = (255, 255, 255)\nGREEN = (50, 255, 50)\nRED = (255, 50, 50)\nYELLOW = (255, 255, 0)",
+        "detail": "shoot",
+        "documentation": {}
+    },
+    {
+        "label": "INITIAL_TIME",
+        "kind": 5,
+        "importPath": "shoot",
+        "description": "shoot",
+        "peekOfCode": "INITIAL_TIME = 30  # Starting time (seconds)\nTIME_PER_HIT = 2  # Seconds added per hit\nTIME_PENALTY = 1  # Seconds lost per missed target\nBG_COLOR = (10, 10, 30)\n# Colors\nWHITE = (255, 255, 255)\nGREEN = (50, 255, 50)\nRED = (255, 50, 50)\nYELLOW = (255, 255, 0)\nBLUE = (100, 100, 255)",
+        "detail": "shoot",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_PER_HIT",
+        "kind": 5,
+        "importPath": "shoot",
+        "description": "shoot",
+        "peekOfCode": "TIME_PER_HIT = 2  # Seconds added per hit\nTIME_PENALTY = 1  # Seconds lost per missed target\nBG_COLOR = (10, 10, 30)\n# Colors\nWHITE = (255, 255, 255)\nGREEN = (50, 255, 50)\nRED = (255, 50, 50)\nYELLOW = (255, 255, 0)\nBLUE = (100, 100, 255)\n# Fonts",
+        "detail": "shoot",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_PENALTY",
+        "kind": 5,
+        "importPath": "shoot",
+        "description": "shoot",
+        "peekOfCode": "TIME_PENALTY = 1  # Seconds lost per missed target\nBG_COLOR = (10, 10, 30)\n# Colors\nWHITE = (255, 255, 255)\nGREEN = (50, 255, 50)\nRED = (255, 50, 50)\nYELLOW = (255, 255, 0)\nBLUE = (100, 100, 255)\n# Fonts\nfont_large = pygame.font.SysFont(\"Arial\", 36)",
+        "detail": "shoot",
+        "documentation": {}
+    },
+    {
+        "label": "BG_COLOR",
+        "kind": 5,
+        "importPath": "shoot",
+        "description": "shoot",
+        "peekOfCode": "BG_COLOR = (10, 10, 30)\n# Colors\nWHITE = (255, 255, 255)\nGREEN = (50, 255, 50)\nRED = (255, 50, 50)\nYELLOW = (255, 255, 0)\nBLUE = (100, 100, 255)\n# Fonts\nfont_large = pygame.font.SysFont(\"Arial\", 36)\nfont_medium = pygame.font.SysFont(\"Arial\", 26)",
+        "detail": "shoot",
+        "documentation": {}
+    },
+    {
+        "label": "WHITE",
+        "kind": 5,
+        "importPath": "shoot",
+        "description": "shoot",
+        "peekOfCode": "WHITE = (255, 255, 255)\nGREEN = (50, 255, 50)\nRED = (255, 50, 50)\nYELLOW = (255, 255, 0)\nBLUE = (100, 100, 255)\n# Fonts\nfont_large = pygame.font.SysFont(\"Arial\", 36)\nfont_medium = pygame.font.SysFont(\"Arial\", 26)\nclass Target:\n    def __init__(self, word):",
+        "detail": "shoot",
+        "documentation": {}
+    },
+    {
+        "label": "GREEN",
+        "kind": 5,
+        "importPath": "shoot",
+        "description": "shoot",
+        "peekOfCode": "GREEN = (50, 255, 50)\nRED = (255, 50, 50)\nYELLOW = (255, 255, 0)\nBLUE = (100, 100, 255)\n# Fonts\nfont_large = pygame.font.SysFont(\"Arial\", 36)\nfont_medium = pygame.font.SysFont(\"Arial\", 26)\nclass Target:\n    def __init__(self, word):\n        self.word = word",
+        "detail": "shoot",
+        "documentation": {}
+    },
+    {
+        "label": "RED",
+        "kind": 5,
+        "importPath": "shoot",
+        "description": "shoot",
+        "peekOfCode": "RED = (255, 50, 50)\nYELLOW = (255, 255, 0)\nBLUE = (100, 100, 255)\n# Fonts\nfont_large = pygame.font.SysFont(\"Arial\", 36)\nfont_medium = pygame.font.SysFont(\"Arial\", 26)\nclass Target:\n    def __init__(self, word):\n        self.word = word\n        self.radius = TARGET_RADIUS",
+        "detail": "shoot",
+        "documentation": {}
+    },
+    {
+        "label": "YELLOW",
+        "kind": 5,
+        "importPath": "shoot",
+        "description": "shoot",
+        "peekOfCode": "YELLOW = (255, 255, 0)\nBLUE = (100, 100, 255)\n# Fonts\nfont_large = pygame.font.SysFont(\"Arial\", 36)\nfont_medium = pygame.font.SysFont(\"Arial\", 26)\nclass Target:\n    def __init__(self, word):\n        self.word = word\n        self.radius = TARGET_RADIUS\n        self.x = random.randint(self.radius, WIDTH - self.radius)",
+        "detail": "shoot",
+        "documentation": {}
+    },
+    {
+        "label": "BLUE",
+        "kind": 5,
+        "importPath": "shoot",
+        "description": "shoot",
+        "peekOfCode": "BLUE = (100, 100, 255)\n# Fonts\nfont_large = pygame.font.SysFont(\"Arial\", 36)\nfont_medium = pygame.font.SysFont(\"Arial\", 26)\nclass Target:\n    def __init__(self, word):\n        self.word = word\n        self.radius = TARGET_RADIUS\n        self.x = random.randint(self.radius, WIDTH - self.radius)\n        self.y = random.randint(self.radius, HEIGHT // 2)",
+        "detail": "shoot",
+        "documentation": {}
+    },
+    {
+        "label": "font_large",
+        "kind": 5,
+        "importPath": "shoot",
+        "description": "shoot",
+        "peekOfCode": "font_large = pygame.font.SysFont(\"Arial\", 36)\nfont_medium = pygame.font.SysFont(\"Arial\", 26)\nclass Target:\n    def __init__(self, word):\n        self.word = word\n        self.radius = TARGET_RADIUS\n        self.x = random.randint(self.radius, WIDTH - self.radius)\n        self.y = random.randint(self.radius, HEIGHT // 2)\n        self.speed_x = random.choice([-TARGET_SPEED, TARGET_SPEED])\n        self.speed_y = 0",
+        "detail": "shoot",
+        "documentation": {}
+    },
+    {
+        "label": "font_medium",
+        "kind": 5,
+        "importPath": "shoot",
+        "description": "shoot",
+        "peekOfCode": "font_medium = pygame.font.SysFont(\"Arial\", 26)\nclass Target:\n    def __init__(self, word):\n        self.word = word\n        self.radius = TARGET_RADIUS\n        self.x = random.randint(self.radius, WIDTH - self.radius)\n        self.y = random.randint(self.radius, HEIGHT // 2)\n        self.speed_x = random.choice([-TARGET_SPEED, TARGET_SPEED])\n        self.speed_y = 0\n        self.typed_so_far = \"\"",
+        "detail": "shoot",
+        "documentation": {}
+    }
+]
